@@ -13,7 +13,7 @@ namespace HttpLifecycleDemo
 
         public void Init(HttpApplication context)
         {
-            LogMessage("Init()");
+            LogMessage("Init() HttpApplication =>" + context.GetHashCode());
             context.BeginRequest += (sender, e) =>
             {
                 LogMessage("HttpContext.BeginRequest");
@@ -30,6 +30,10 @@ namespace HttpLifecycleDemo
                 LogMessage("HttpContext.Error");
             };
             LogMessage("Init() DONE!");
+
+
+            //context.AcquireRequestState += new EventHandler(app_AcquireRequestState);
+            //context.PostAcquireRequestState += new EventHandler(app_PostAcquireRequestState);
         }
 
         private void ThrowAnotherEx()
@@ -42,6 +46,23 @@ namespace HttpLifecycleDemo
                 throw new ArgumentException("EndRequest ThrowAnotherEx");
             }
         }
+
+        //// Define a custom AcquireRequestState event handler.
+        //public void app_AcquireRequestState(object o, EventArgs ea)
+        //{
+        //    HttpApplication httpApp = (HttpApplication)o;
+        //    HttpContext ctx = HttpContext.Current;
+        //    ctx.Response.Write(" Executing AcquireRequestState ");
+        //}
+
+        //// Define a custom PostAcquireRequestState event handler.
+        //public void app_PostAcquireRequestState(object o, EventArgs ea)
+        //{
+        //    HttpApplication httpApp = (HttpApplication)o;
+        //    HttpContext ctx = HttpContext.Current;
+        //    ctx.Response.Write(" Executing PostAcquireRequestState ");
+        //}
+
 
         public void Dispose()
         {

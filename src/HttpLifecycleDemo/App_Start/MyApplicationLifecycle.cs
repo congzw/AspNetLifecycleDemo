@@ -13,6 +13,7 @@ namespace HttpLifecycleDemo
         public static void PreApplicationStart()
         {
             LogMessage("=> PreApplicationStart()");
+            LogMessage("=> DynamicModuleUtility.RegisterModule()");
             DynamicModuleUtility.RegisterModule(typeof(MyHttpModule));
             LogMessage("=> DynamicModuleUtility.RegisterModule() DONE!");
         }

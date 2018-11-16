@@ -38,7 +38,7 @@ namespace HttpLifecycleDemo.Common
                 prefix = GetPrefix();
             }
             var myHttpContextHelper = MyHttpContextHelper.Instance;
-            var url = "[]";
+            var url = "[!]";
             if (myHttpContextHelper.IsRequestAvailable())
             {
                 var uri = myHttpContextHelper.GetHttpContext().Request.Url;

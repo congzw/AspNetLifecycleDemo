@@ -5,6 +5,10 @@ namespace HttpLifecycleDemo
 {
     public class Global : System.Web.HttpApplication
     {
+        public Global()
+        {
+            LogMessage("CTOR()");
+        }
 
         protected void Application_Start(object sender, EventArgs e)
         {
@@ -42,9 +46,9 @@ namespace HttpLifecycleDemo
             LogMessage("Application_End");
         }
 
-        private static void LogMessage(string message)
+        private void LogMessage(string message)
         {
-            UtilsLogger.LogMessage(typeof(Global), ">>>>>>>>>>" + message);
+            UtilsLogger.LogMessage(typeof(Global), "[" + this.GetHashCode() + "] " +">>>>>>>>>>" + message);
         }
     }
 }
