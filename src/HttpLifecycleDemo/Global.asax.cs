@@ -16,30 +16,35 @@ namespace HttpLifecycleDemo
             MainEntry.Init();
         }
 
-        protected void Session_Start(object sender, EventArgs e)
-        {
-            LogMessage("Session_Start");
-        }
+        //protected void Session_Start(object sender, EventArgs e)
+        //{
+        //    LogMessage("Session_Start");
+        //}
 
-        protected void Application_BeginRequest(object sender, EventArgs e)
-        {
-            LogMessage("Application_BeginRequest");
-        }
+        //protected void Application_BeginRequest(object sender, EventArgs e)
+        //{
+        //    LogMessage("Application_BeginRequest");
+        //}
 
-        protected void Application_AuthenticateRequest(object sender, EventArgs e)
-        {
-            LogMessage("Application_AuthenticateRequest");
-        }
+        //protected void Application_EndRequest(object sender, EventArgs e)
+        //{
+        //    LogMessage("Application_EndRequest");
+        //}
+
+        //protected void Application_AuthenticateRequest(object sender, EventArgs e)
+        //{
+        //    LogMessage("Application_AuthenticateRequest");
+        //}
 
         protected void Application_Error(object sender, EventArgs e)
         {
             LogMessage("Application_Error");
         }
 
-        protected void Session_End(object sender, EventArgs e)
-        {
-            LogMessage("Session_End");
-        }
+        //protected void Session_End(object sender, EventArgs e)
+        //{
+        //    LogMessage("Session_End");
+        //}
 
         protected void Application_End(object sender, EventArgs e)
         {

@@ -95,6 +95,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Views\Empty\Child.cshtml" />
+    <None Include="Views\Empty\Index2.cshtml" />
+    <Content Include="Views\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,7 +114,7 @@
     <Compile Include="App_Start\MainEntry.cs" />
     <Compile Include="App_Start\MyApplicationLifecycle.cs" />
     <Compile Include="App_Start\MyHttpModule.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\MvcConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\MyHttpContextHelper.cs" />
     <Compile Include="Common\UtilsLogger.cs" />
